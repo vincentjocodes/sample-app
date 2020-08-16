@@ -2,13 +2,16 @@ apiVersion: skaffold/v2beta6
 kind: Config
 build:
   cluster:
+    dockerConfig:
+      path: /tekton/home/.docker/config.json
     randomDockerConfigSecret: true
   tagPolicy:
     sha256: {}
   artifacts:
   - image: viglesiasce/sample-app-backend-dev
     context: cmd/backend
-    kaniko: {}
+    kaniko:
+      cache: {}
   - image: viglesiasce/sample-app-frontend-dev
     context: cmd/frontend
 deploy:
