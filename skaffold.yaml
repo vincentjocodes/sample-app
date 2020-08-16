@@ -11,11 +11,13 @@ build:
   - image: viglesiasce/sample-app-backend-dev
     context: cmd/backend
     kaniko:
-      cache: {}
+      cache:
+        repo: viglesiasce/sample-app-cache
   - image: viglesiasce/sample-app-frontend-dev
     context: cmd/frontend
     kaniko:
-      cache: {}
+      cache:
+        repo: viglesiasce/sample-app-cache
 deploy:
   kustomize:
     paths:
