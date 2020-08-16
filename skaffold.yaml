@@ -1,14 +1,15 @@
-apiVersion: skaffold/v1alpha2
+apiVersion: skaffold/v2beta6
 kind: Config
 build:
   tagPolicy:
     sha256: {}
   artifacts:
-  - imageName: viglesiasce/sample-app-backend-dev
-    workspace: cmd/backend
+  - image: viglesiasce/sample-app-backend-dev
+    context: cmd/backend
     kaniko: {}
-  - imageName: viglesiasce/sample-app-frontend-dev
-    workspace: cmd/frontend
+  - image: viglesiasce/sample-app-frontend-dev
+    context: cmd/frontend
 deploy:
   kustomize:
-    kustomizePath: k8s/dev/
+    paths:
+    - k8s/dev/
