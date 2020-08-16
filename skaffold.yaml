@@ -3,7 +3,7 @@ kind: Config
 build:
   cluster:
     dockerConfig:
-      path: /tekton/home/.docker/config.json
+      path: ~/.docker/config.json
     randomDockerConfigSecret: true
   tagPolicy:
     sha256: {}
