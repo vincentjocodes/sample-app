@@ -1,6 +1,7 @@
 apiVersion: skaffold/v2beta6
 kind: Config
 build:
+  cluster: {}
   tagPolicy:
     sha256: {}
   artifacts:
