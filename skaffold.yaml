@@ -2,8 +2,8 @@ apiVersion: skaffold/v2beta6
 kind: Config
 build:
   cluster:
-    dockerConfig:
-      path: ~/.docker/config.json
+    # dockerConfig:
+    #   path: ~/.docker/config.json
     randomDockerConfigSecret: true
   tagPolicy:
     sha256: {}
