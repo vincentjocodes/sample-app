@@ -6,6 +6,7 @@ build:
   artifacts:
   - imageName: viglesiasce/sample-app-backend-dev
     workspace: cmd/backend
+    kaniko: {}
   - imageName: viglesiasce/sample-app-frontend-dev
     workspace: cmd/frontend
 deploy:
