@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: sample-app-backend-dev
+        image: viglesiasce/sample-app-backend-dev
         env:
         - name: VERSION
           value: dev
